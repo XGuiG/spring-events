@@ -8,9 +8,14 @@
     <table class="table table-striped">
         <tr>
             <th>Name</th>
+            <th>Description</th>
+            <th>Address</th>
+            <th>Picture</th>
         </tr>
-        <tr th:each="event: ${events}">
-            <td th:text="${event}"></td>
+        <tr th:each="key: ${events.keySet()}">
+            <td th:text="${key}"></td>
+            <td th:text="${events.get(key)}"></td>
+            <th:block th:replace="fragment :: address-picture">ap</th:block>
         </tr>
     </table>
 </body>

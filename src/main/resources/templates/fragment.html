@@ -11,8 +11,11 @@
         <h1 th:text="${title}">Events</h1>
         <ul class="nav">
             <li class="nav-item"><a class="nav-link" href="/events">All events</a></li>
-            <li class="nav-item"><a class="nav-link" href="/events/create">Create event</a></li>
         </ul>
     </nav>
+    <th:block th:fragment="address-picture">
+        <td>1234 5th Street</td>
+        <td><img th:src="@{/code.jpg}" width="100" height="100"></td>
+    </th:block>
 </body>
 </html>
