@@ -8,9 +8,10 @@
 </head>
 <body>
     <nav th:fragment="navigation">
-        <h1 th:text="${title}">Events</h1>
         <ul class="nav">
             <li class="nav-item"><a class="nav-link" href="/events">All events</a></li>
+            <li class="nav-item"><a class="nav-link" href="/events/create">Create Event</a></li>
+            <li class="nav-item"><a class="nav-link" href="/events/delete">Delete Event</a></li>
         </ul>
     </nav>
     <th:block th:fragment="address-picture">

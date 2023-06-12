@@ -7,15 +7,14 @@
     <p th:unless="${events} and ${events.size()}">No event!</p>
     <table class="table table-striped">
         <tr>
+            <th>ID</th>
             <th>Name</th>
             <th>Description</th>
-            <th>Address</th>
-            <th>Picture</th>
         </tr>
-        <tr th:each="key: ${events.keySet()}">
-            <td th:text="${key}"></td>
-            <td th:text="${events.get(key)}"></td>
-            <th:block th:replace="fragment :: address-picture">ap</th:block>
+        <tr th:each="event: ${events}">
+            <td th:text="${event.id}"></td>
+            <td th:text="${event.name}"></td>
+            <td th:text="${event.description}"></td>
         </tr>
     </table>
 </body>
